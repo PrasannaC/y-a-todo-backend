@@ -1,0 +1,15 @@
+type Todo {
+  _id: ID
+  title: String!
+  createdDate: String!
+  isDone: Boolean!
+}
+
+type Query {
+  list: [Todo]
+}
+
+type Mutation {
+  create(title: String!): Todo!
+  markDone(id: String!): Boolean
+}
